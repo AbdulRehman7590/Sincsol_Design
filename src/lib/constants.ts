@@ -2,7 +2,30 @@ import { Monitor, Smartphone, Code } from "@mui/icons-material";
 import { Brain, Database } from "lucide-react";
 
 // Landing Page
-export const lservices = [
+export const features = [
+  {
+    title: "Performance",
+    description:
+      "We deliver high-performance solutions that enhance efficiency and drive results.",
+  },
+  {
+    title: "Security",
+    description:
+      "Our solutions are built with advanced security to protect your data and business.",
+  },
+  {
+    title: "Scalability",
+    description:
+      "Designed to grow with your business, ensuring long-term adaptability and success.",
+  },
+  {
+    title: "Customer Focus",
+    description:
+      "We prioritize your needs, delivering tailored solutions for sustained business growth.",
+  },
+];
+
+export const services = [
   {
     icon: Monitor,
     title: "Wordpress Development",
@@ -16,16 +39,34 @@ export const lservices = [
       "We create functional, visually engaging mobile apps that captivate users and deliver results.",
   },
   {
+    icon: Monitor,
+    title: "Wordpress Development",
+    description:
+      "Easily automate data and monitor your site with our user-friendly WordPress solutions.",
+  },
+  {
     icon: Code,
     title: "Web App Development",
     description:
       "We design, develop and maintain impactful, responsive and user-friendly websites.",
   },
   {
+    icon: Monitor,
+    title: "Wordpress Development",
+    description:
+      "Easily automate data and monitor your site with our user-friendly WordPress solutions.",
+  },
+  {
     icon: Brain,
     title: "AI & Machine Learning",
     description:
       "Stand out with custom AI solutions that drive innovation and growth.",
+  },
+  {
+    icon: Monitor,
+    title: "Wordpress Development",
+    description:
+      "Easily automate data and monitor your site with our user-friendly WordPress solutions.",
   },
   {
     icon: Database,
@@ -35,76 +76,27 @@ export const lservices = [
   },
 ];
 
-export const services = [
-  {
-    id: 1,
-    title: 'WordPress Development',
-    description: 'Build scalable and secure WordPress solutions for your business needs.',
-    image: '/placeholder.svg?height=400&width=600',
-    href: '/services/wordpress-development'
-  },
-  {
-    id: 2,
-    title: 'Mobile App Development',
-    description: 'Create functional, feature-rich mobile applications for iOS and Android.',
-    image: '/placeholder.svg?height=400&width=600',
-    href: '/services/mobile-app-development'
-  },
-  {
-    id: 3,
-    title: 'Web App Development',
-    description: 'We design, develop and maintain impactful, responsive and user-friendly websites.',
-    image: '/placeholder.svg?height=400&width=600',
-    href: '/services/web-app-development'
-  },
-  {
-    id: 4,
-    title: 'AI & Machine Learning',
-    description: 'Leverage cutting-edge AI and ML solutions to transform your business processes.',
-    image: '/placeholder.svg?height=400&width=600',
-    href: '/services/ai-ml'
-  },
-  {
-    id: 5,
-    title: 'Data Analysis',
-    description: 'Transform raw data into actionable insights with our advanced analytics solutions.',
-    image: '/placeholder.svg?height=400&width=600',
-    href: '/services/data-analysis'
-  }
-]
-
 export const landingProjects = [
   {
     title: "AI-Powered Healthcare",
     category: "Healthcare",
     description:
       "Revolutionizing patient care with advanced AI diagnostics and monitoring systems.",
-    image:
-      "/placeholder.svg?height=400&width=600",
+    image: "/images/case1.png",
   },
   {
     title: "Smart Education Platform",
     category: "Education",
     description:
       "Transforming learning experiences with personalized AI-driven education solutions.",
-    image:
-      "/placeholder.svg?height=400&width=600",
-  },
-  {
-    title: "Environmental Monitoring",
-    category: "Environment",
-    description:
-      "Real-time environmental analysis and sustainability tracking platform.",
-    image:
-      "/placeholder.svg?height=400&width=600",
+    image: "/images/develop.png",
   },
   {
     title: "Fintech Innovation",
     category: "Finance",
     description:
       "Next-generation financial technology solutions for modern banking.",
-    image:
-      "/placeholder.svg?height=400&width=600",
+    image: "/images/finance.png",
   },
 ];
 
