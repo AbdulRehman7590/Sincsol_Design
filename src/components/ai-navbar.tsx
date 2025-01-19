@@ -95,9 +95,9 @@ export default function AINavbar() {
               isActive("/contact")
                 ? "bg-[#8B5CF6] text-white"
                 : "bg-[#8B5CF6] text-white hover:bg-[#7C3AED]"
-            } px-6 py-2 rounded-full transition-colors`}
+            } px-6 py-2 rounded-lg transition-colors`}
           >
-            Contact Us
+            <Link href="/contact">Contact Us</Link>
           </Button>
         </div>
       </nav>
