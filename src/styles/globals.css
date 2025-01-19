@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #8B5CF6;
+  --primary-hover: #7C3AED;
+  --background: #FFFFFF;
+  --foreground: #1F2937;
+  --muted: #F3F4F6;
+  --muted-foreground: #6B7280;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+}
+
+.circle-decoration {
+  @apply absolute w-24 h-24 rounded-full border border-purple-200 opacity-50;
+}
+
+.circle-decoration::before {
+  content: '';
+  @apply absolute w-4 h-4 rounded-full bg-purple-600 -top-2 -left-2;
+}
+
+/* Add custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-hover);
+}
+
