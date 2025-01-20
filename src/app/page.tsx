@@ -34,14 +34,14 @@ export default function Home() {
   }, [emblaApi]);
 
   return (
-    <main className="min-h-screen">
+    <>
       <MainNavbar />
 
       {/* Hero Section */}
-      <section className="min-h-[83vh] py-20 bg-gradient-to-t from-[#f4e4c4]/80 to-[#f6e2e5]">
-        <div className="circle-decoration top-12 left-12" />
+      <section className="min-h-screen bg-gradient-to-t from-[#f4e4c4]/80 to-[#f6e2e5]">
+        <div className="circle-decoration top-36 left-12" />
 
-        <div className="container mx-12 px-4 grid lg:grid-cols-2 gap-20 items-center">
+        <div className="container pt-48 pb-20 mx-12 px-4 grid lg:grid-cols-2 gap-20 items-center">
           <div className="space-y-8 max-w-xl">
             <h1 className="text-5xl font-bold leading-tight">
               Let&apos;s Build <span className="text-[#8B5CF6]">{"{}"}</span>{" "}
@@ -518,6 +518,6 @@ export default function Home() {
       />
 
       <Footer />
-    </main>
+    </>
   );
 }

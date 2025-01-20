@@ -2,6 +2,7 @@ import Image from "next/image";
 import MainNavbar from "@/components/main-navbar";
 import HeroSection from "@/components/hero-section";
 import Footer from "@/components/footer";
+import { Badge } from "@/components/ui/badge";
 import ValueCard from "@/components/value-card";
 import { values1, values2 } from "@/lib/constants";
 
@@ -61,8 +62,22 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Decorative Circle */}
+      <div className="transform translate-y-1/2">
+        <Image
+          src="/images/hero-circle.png"
+          alt="hero section"
+          width={128}
+          height={128}
+          className="object-cover"
+          style={{
+            clipPath: "inset(0 0 0 30%)",
+          }}
+        />
+      </div>
+
       {/* Mission Section */}
-      <section className="min-h-[75vh] max-w-6xl mx-auto px-4 py-10">
+      <section className="min-h-[75vh] max-w-6xl mx-auto px-4 pb-10">
         <h1
           className="text-7xl font-bold text-center text-transparent"
           style={{
@@ -83,7 +98,7 @@ export default function AboutPage() {
         </h2>
 
         <div
-          className="relative bg-cover bg-center mt-16 rounded-xl min-h-[400px] max-w-5xl flex mx-auto items-center justify-center text-white p-8 md:p-12"
+          className="relative bg-cover bg-center mt-12 rounded-xl min-h-[400px] max-w-5xl flex mx-auto items-center justify-center text-white p-8 md:p-12"
           style={{
             backgroundImage: "url('/images/mission-bg.png')",
           }}
@@ -107,6 +122,17 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Decorative dots */}
+      <div className="flex justify-end mr-8">
+        <Image
+          src="/images/dec-dots.png"
+          alt="hero section"
+          width={128}
+          height={128}
+          className="object-cover"
+        />
+      </div>
+
       {/* Vision Section */}
       <section className="min-h-[75vh] py-40">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -122,12 +148,26 @@ export default function AboutPage() {
           </div>
 
           <div className="space-y-6">
-            <h3 className="text-sm tracking-wider text-purple-600 uppercase">
-              Why Choose SIncSol?
-            </h3>
-            <h2 className="text-4xl font-bold">
-              Our <span className="text-purple-600">Vision</span>
-            </h2>
+            <div className="flex items-center justify-between">
+              <div>
+                <Badge
+                  variant="outline"
+                  className="text-purple-500 text-sm tracking-wider uppercase border-purple-600 rounded-full px-2 py-4 mb-6"
+                >
+                  Why Choose SIncSol?
+                </Badge>
+                <h2 className="text-4xl mt-4 font-bold">
+                  Our <span className="text-purple-600">Vision</span>
+                </h2>
+              </div>
+              <Image
+                src="/images/dec-tri.png"
+                alt="hero section"
+                width={128}
+                height={128}
+                className="object-cover mr-32 mb-8"
+              />
+            </div>
             <blockquote className="border-l-2 border-purple-600 px-4 text-sm text-purple-600 italic mb-4 max-w-xl">
               &quot;At SIncSol, we See Technology As The Key To Unlocking A
               Smarter, More Connected World From The Beginning. Our Mission Has
@@ -147,7 +187,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section id="values" className="min-h-[75vh] py-16 px-20 mx-20">
+      <section id="values" className="pt-12 px-20 mx-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {values1.map((value) => (
             <ValueCard key={value.title} {...value} />
@@ -168,6 +208,16 @@ export default function AboutPage() {
           ))}
         </div>
       </section>
+
+      {/* Decorative Arrow */}
+      <div className="flex justify-end mr-8">
+        <Image
+          src="/images/dec-arrow.png"
+          alt="hero section"
+          width={256}
+          height={256}
+        />
+      </div>
 
       <Footer />
     </>

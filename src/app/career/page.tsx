@@ -11,13 +11,12 @@ import MainNavbar from "@/components/main-navbar";
 import HeroSection from "@/components/hero-section";
 import Footer from "@/components/footer";
 import RecruitmentStep from "@/components/recruitment-step";
-
+import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
 import { JobCard } from "@/components/job-card";
 import { CustomPagination } from "@/components/custom-pagination";
 import { FilterSelect } from "@/components/filter";
 import { MOCK_JOBS, recruitmentSteps, faqItems } from "@/lib/constants";
-
 
 const ITEMS_PER_PAGE = 3;
 
@@ -29,7 +28,7 @@ export default function CareerPage() {
   const currentJobs = MOCK_JOBS.slice(startIndex, endIndex);
 
   return (
-    <div className="min-h-screen">
+    <>
       <MainNavbar />
 
       {/* Hero Section */}
@@ -62,9 +61,12 @@ export default function CareerPage() {
 
           {/* Content */}
           <div className="space-y-8 md:pt-10">
-            <div className="inline-block px-4 py-2 my-4 text-black text-md font-medium">
+            <Badge
+              variant="outline"
+              className="text-purple-500 text-md font-medium border-purple-600 rounded-full px-4 py-2 my-4"
+            >
               Why Join Us?
-            </div>
+            </Badge>
 
             <h2 className="text-4xl md:text-5xl font-bold">
               Why <span className="text-purple-600">SincSol</span> ?
@@ -140,13 +142,13 @@ export default function CareerPage() {
 
       {/* FAQ Section */}
       <section className="py-20 bg-[#F9FAFB] min-h-[75vh]">
-        <div className="relative w-full max-w-6xl mx-auto p-8">
-          <div className="grid md:grid-cols-[300px,1fr] gap-12">
+        <div className="relative w-full max-w-7xl mx-auto p-8">
+          <div className="grid md:grid-cols-[350px,1fr] gap-12">
             {/* Left side content */}
-            <div className="relative mt-16 space-y-2">
-              <h1 className="text-4xl font-bold">Your Guide to</h1>
-              <h1 className="text-4xl font-bold text-purple-500">
-                What Matters Most
+            <div className="relative mt-12 space-y-2">
+              <h1 className="text-5xl font-bold">
+                Your Guide to{" "}
+                <span className="text-purple-600">What Matters Most</span>
               </h1>
             </div>
 
@@ -168,6 +170,6 @@ export default function CareerPage() {
       </section>
 
       <Footer />
-    </div>
+    </>
   );
 }
