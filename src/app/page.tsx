@@ -6,10 +6,12 @@ import MainNavbar from "@/components/main-navbar";
 import Footer from "@/components/footer";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Clock, Users, Globe } from "lucide-react";
 import { features, services, landingProjects } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import ServiceItem from "@/components/service-price";
 import {
   Carousel,
   CarouselContent,
@@ -113,9 +115,12 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 py-6">
           {/* Header section */}
           <div className="text-center mb-16">
-            <div className="inline-block px-6 py-2 bg-purple-50 text-md text-purple-600 mb-6">
+            <Badge
+              variant="outline"
+              className="text-purple-500 text-md border-purple-600 rounded-full px-4 py-2 mb-6"
+            >
               Discover the Difference
-            </div>
+            </Badge>
             <h2 className="text-5xl font-bold mb-6">
               Why We <span className="text-purple-500">Stand Out</span>
             </h2>
@@ -160,9 +165,12 @@ export default function Home() {
 
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-md text-[#8B5CF6] uppercase tracking-wider mb-8">
+            <Badge
+              variant="outline"
+              className="text-[#8B5CF6] text-md border-purple-600 rounded-full px-4 py-2 mb-8 tracking-wider"
+            >
               What We Offer
-            </p>
+            </Badge>
             <h2 className="text-5xl max-w-xl mx-auto font-bold mb-4">
               Tailored <span className="text-[#8B5CF6]">Services</span> for Your
               Success
@@ -274,7 +282,12 @@ export default function Home() {
           {/* Header */}
           <div className="grid grid-cols-1 md:grid-cols-2 mx-12 items-center">
             <div className="mb-8">
-              <span className="text-md text-purple-600">Projects</span>
+              <Badge
+                variant="outline"
+                className="text-purple-600 text-md border-purple-600 rounded-full px-4 py-2"
+              >
+                Projects
+              </Badge>
               <h2
                 className="text-5xl font-bold mt-2 mb-10"
                 style={{ lineHeight: "1.3" }}
@@ -356,66 +369,124 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-gradient-to-t from-[#f4e4c4]/80 to-[#f6e2e5]">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">
-                Delivering Cutting-Edge{" "}
-                <span className="text-purple-600">AI-Powered Solutions</span> on
-                Time and Within Budget
-              </h2>
-              <p className="text-gray-600">
-                We are committed to providing top-notch, customized solutions
-                that support growth and transformation for our clients.
-                Leveraging the latest in AI technology, we ensure exceptional
-                results that are both timely and cost-effective.
-              </p>
-            </div>
+      <section className="bg-gradient-to-t from-[#f4e4c4]/80 to-[#f6e2e5] py-12 md:py-16 lg:py-20">
+        <div className="container mx-12">
+          <div className="grid gap-8 lg:grid-cols-2">
+            {/* Left Column */}
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <Badge
+                  variant="outline"
+                  className="text-purple-500 text-md border-purple-600 rounded-full px-4 py-2"
+                >
+                  Pricing
+                </Badge>
 
-            <div className="bg-purple-50 rounded-lg p-8 mb-8">
-              <div className="flex justify-between items-center mb-6">
-                <div>
-                  <h3 className="text-2xl font-bold">Starting from</h3>
-                  <div className="text-4xl font-bold text-purple-600">
-                    $20/hr
-                  </div>
-                </div>
-                <Button asChild>
-                  <Link href="/contact">Contact Us</Link>
+                <h2 className="text-4xl font-bold tracking-tight lg:text-5xl">
+                  Delivering Cutting-Edge{" "}
+                  <span className="text-purple-500">AI-Powered Solutions</span>{" "}
+                  on Time and{" "}
+                  <span className="text-purple-500">Within Budget</span>
+                </h2>
+
+                <p className="text-gray-600 text-lg">
+                  We are committed to providing top-notch, customized solutions
+                  that support growth and transformation for our clients.
+                  Leveraging the latest in AI technology, we ensure exceptional
+                  results that are both timely and cost-effective.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <ServiceItem
+                  icon={<Clock className="w-6 h-6" />}
+                  title="Software Outsourcing"
+                  description="End-to-end software development, expertly managed from start to finish."
+                />
+
+                <ServiceItem
+                  icon={<Users className="w-6 h-6" />}
+                  title="Staff Augmentation"
+                  description="Strengthen your team with qualified professionals, reducing the time spent on recruitment and training."
+                />
+
+                <ServiceItem
+                  icon={<Globe className="w-6 h-6" />}
+                  title="Dedicated Teams"
+                  description="Accelerate your projects with dedicated teams that effortlessly integrate with your existing processes."
+                />
+              </div>
+
+              <div className="flex gap-4">
+                <Button
+                  asChild
+                  className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-6 py-6 rounded-lg text-lg"
+                >
+                  <Link href="#">See All Projects</Link>
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border-[#8B5CF6] text-black bg-transparent hover:bg-black/8 px-2 py-6 rounded-lg text-lg"
+                >
+                  <Link href="#">
+                    <ChevronRight className="h-4 w-4" />
+                  </Link>
                 </Button>
               </div>
-              <p className="text-gray-600 text-sm">
-                Using advanced tools like ChatGPT and Collins, software
-                development is now faster and more efficient than ever. Our
-                engineers, skilled in these cutting-edge technologies, are
-                dedicated to maximizing the ROI of your project.
-              </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="text-4xl font-bold text-purple-600 mb-2">
-                  50+
+            {/* Right Column */}
+            <div className="space-y-8 max-w-2xl">
+              <Card className="p-6 bg-white shadow-lg rounded-xl">
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <p className="text-purple-500">Starting from</p>
+                      <p className="text-4xl font-bold">$20/hr</p>
+                    </div>
+                    <div>
+                      <Button
+                        variant="outline"
+                        className="px-6 py-2 rounded-lg text-[#8B5CF6] border-[#8B5CF6] hover:bg-[#7C3AED] hover:text-white"
+                      >
+                        <Link href="/contact">Contact Us</Link>
+                      </Button>
+                    </div>
+                  </div>
+                  <p className="text-gray-600">
+                    Powered by advanced tools like ChatGPT and CoPilot, software
+                    development is now faster and more efficient than ever. Our
+                    engineers, skilled in these cutting-edge technologies, are
+                    dedicated to maximizing the ROI of your project.
+                  </p>
+                  <p className="text-gray-600">
+                    Experience our expertise risk-free for the first 2 weeks.
+                    We&apos;re confident in the value we bring—if we don&apos;t
+                    make a positive impact, we&apos;ll keep working at no cost
+                    until we do.
+                  </p>
                 </div>
-                <div className="text-sm text-gray-600">
-                  Successfully Completed Projects
+              </Card>
+
+              <Card className="p-6 bg-white shadow-lg rounded-2xl relative overflow-hidden">
+                <div className="grid grid-cols-2 gap-8">
+                  <div className="space-y-2">
+                    <p className="text-5xl font-bold text-purple-500">50+</p>
+                    <p className="text-gray-600">
+                      Successfully Completed Projects
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <p className="text-5xl font-bold text-purple-500">30</p>
+                    <p className="text-gray-600">Satisfied Clients</p>
+                  </div>
+                  <div className="space-y-2">
+                    <p className="text-5xl font-bold text-purple-500">5+</p>
+                    <p className="text-gray-600">Proprietary Products</p>
+                  </div>
                 </div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-purple-600 mb-2">
-                  30
-                </div>
-                <div className="text-sm text-gray-600">Satisfied Clients</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-purple-600 mb-2">
-                  5+
-                </div>
-                <div className="text-sm text-gray-600">
-                  Proprietary Products
-                </div>
-              </div>
+              </Card>
             </div>
           </div>
         </div>

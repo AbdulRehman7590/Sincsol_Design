@@ -2,7 +2,17 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import type { Job } from "@/types/job";
+
+export interface Job {
+  title: string;
+  description: string;
+  type: string[];
+  postedAt: string;
+  company: {
+    name: string;
+    logo?: string;
+  };
+}
 
 interface JobCardProps {
   job: Job;
@@ -31,7 +41,7 @@ export function JobCard({ job }: JobCardProps) {
                 >
                   {tag}
                 </Badge>
-              ))} 
+              ))}
             </div>
             <p className="text-sm text-muted-foreground">{job.description}</p>
             <p className="text-sm text-muted-foreground">{job.postedAt}</p>
