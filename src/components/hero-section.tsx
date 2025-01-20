@@ -17,7 +17,7 @@ export default function HeroSection({
   buttontext = "Click Here",
 }: HeroSectionProps) {
   return (
-    <section className="min-h-[83vh] pt-24 pb-12 bg-gradient-to-b from-white to-[#c6b4f6] relative overflow-hidden">
+    <section className="min-h-screen pt-64 pb-12 bg-gradient-to-b from-white to-[#c6b4f6] relative overflow-hidden">
       <div className="circle-decoration top-12 left-12" />
       <div className="circle-decoration bottom-12 right-12" />
 
@@ -34,7 +34,7 @@ export default function HeroSection({
           <Button
             asChild
             variant="outline"
-            className="border-[#8B5CF6] text-black hover:bg-black/8 px-2 py-6 rounded-lg text-lg"
+            className="border-[#8B5CF6] text-black bg-tranparent px-2 py-6 rounded-lg text-lg"
           >
             <Link href={url}>
               <ChevronRight className="h-4 w-4" />
