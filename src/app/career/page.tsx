@@ -17,6 +17,8 @@ import { JobCard } from "@/components/job-card";
 import { CustomPagination } from "@/components/custom-pagination";
 import { FilterSelect } from "@/components/filter";
 import { MOCK_JOBS, recruitmentSteps, faqItems } from "@/lib/constants";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const ITEMS_PER_PAGE = 3;
 
@@ -85,6 +87,17 @@ export default function CareerPage() {
         </div>
       </section>
 
+      {/* Decorative dots */}
+      <div className="flex justify-end mr-8 transform translate-y-[-60%]">
+        <Image
+          src="/images/dec-dots.png"
+          alt="hero section"
+          width={128}
+          height={128}
+          className="object-cover"
+        />
+      </div>
+
       {/* Available Positions Section */}
       <section id="positions" className="min-h-[75vh]">
         <div className="container mx-auto py-8 max-w-5xl">
@@ -116,6 +129,20 @@ export default function CareerPage() {
       {/* Recruitment Process Section */}
       <section className="mt-8 py-20 min-h-[75vh]">
         <div className="container px-4 mx-auto">
+          {/* Decorative Circle */}
+          <div className="transform translate-y-3/4">
+            <Image
+              src="/images/hero-circle.png"
+              alt="hero section"
+              width={128}
+              height={128}
+              className="object-cover"
+              style={{
+                clipPath: "inset(0 0 0 30%)",
+              }}
+            />
+          </div>
+
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold">
@@ -141,11 +168,18 @@ export default function CareerPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-[#F9FAFB] min-h-[75vh]">
+      <section className="pt-20 pb-10 bg-[#F9FAFB] min-h-[75vh]">
         <div className="relative w-full max-w-7xl mx-auto p-8">
           <div className="grid md:grid-cols-[350px,1fr] gap-12">
             {/* Left side content */}
-            <div className="relative mt-12 space-y-2">
+            <div className="relative">
+              <Image
+                src="/images/dec-tri.png"
+                alt="hero section"
+                width={128}
+                height={128}
+                className="object-cover mr-32 mb-8"
+              />
               <h1 className="text-5xl font-bold">
                 Your Guide to{" "}
                 <span className="text-purple-600">What Matters Most</span>
@@ -168,6 +202,49 @@ export default function CareerPage() {
           </div>
         </div>
       </section>
+
+      {/* Decorative Circle */}
+      <div className="transform translate-y-3/4">
+        <Image
+          src="/images/hero-circle.png"
+          alt="hero section"
+          width={128}
+          height={128}
+          className="object-cover"
+          style={{
+            clipPath: "inset(0 0 0 30%)",
+          }}
+        />
+      </div>
+
+      {/* CTA Section */}
+      <section className="pb-10">
+        <div className="container px-4 mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">
+            Let&apos;s Build the{" "}
+            <span className="text-[#8B5CF6]">Future Together</span>
+          </h2>
+          <p className="text-gray-600 mb-8 max-w-4xl mx-auto text-lg">
+            Are you ready to take the next step in your career? At SincSol,
+            we&apos;re not just offering jobs—we&apos;re offering journeys of
+            growth, impact, and fulfillment.
+          </p>
+          <Button
+            asChild
+            className="bg-[#8B5CF6] text-white hover:bg-[#7C3AED]"
+          >
+            <Link href="/contact">Discuss Your Project</Link>
+          </Button>
+        </div>
+      </section>
+
+      <Image
+        src="/images/career-bg.png"
+        alt="Discussion Image"
+        width={300}
+        height={400}
+        className="w-full h-[550px] object-cover"
+      />
 
       <Footer />
     </>

@@ -64,9 +64,9 @@ export default function ContactPage() {
     <>
       <MainNavbar />
 
-      <div className="grid md:grid-cols-2 gap-8 py-5">
+      <div className="grid md:grid-cols-2 gap-8">
         {/* Left Section */}
-        <div className="bg-[#8B5CF6] p-12 text-white">
+        <div className="bg-[#8B5CF6] p-12 pt-44 text-white">
           <div className="pl-[10%]">
             <h1 className="text-5xl font-bold mb-12">
               Let&apos;s Talk With Us
@@ -120,7 +120,7 @@ export default function ContactPage() {
         </div>
 
         {/* Right Section */}
-        <div className="p-8">
+        <div className="p-8 pt-40">
           <div className="pr-[17%]">
             <div className="mb-8">
               <h4 className="text-xl text-[#8B5CF6] font-bold mb-3">
@@ -168,7 +168,7 @@ export default function ContactPage() {
                 <label className="text-sm">Message</label>
                 <Textarea
                   placeholder="Your message"
-                  className="min-h-[120px]"
+                  className="min-h-[100px]"
                 />
               </div>
 

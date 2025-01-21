@@ -9,6 +9,7 @@ import ProcessStep from "@/components/process-step";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { projects, categories } from "@/lib/constants";
 
 export default function PortfolioPage() {
@@ -42,7 +43,12 @@ export default function PortfolioPage() {
       {/* Portfolio Section */}
       <section className="py-16 px-4 md:px-6">
         <div className="text-center mb-12" id="work">
-          <p className="text-purple-500 mb-8">Featured Projects</p>
+          <Badge
+            variant="outline"
+            className="text-purple-500 text-md font-medium border-purple-600 rounded-full px-4 py-2 mb-8"
+          >
+            Featured Projects
+          </Badge>
           <h2 className="text-4xl font-bold mb-8">
             Our Work <span className="text-purple-500">Speaks For Itself</span>
           </h2>
@@ -113,11 +119,30 @@ export default function PortfolioPage() {
         </div>
       </section>
 
+      {/* Decorative Circle */}
+      <div className="transform translate-y-3/4">
+        <Image
+          src="/images/hero-circle.png"
+          alt="hero section"
+          width={128}
+          height={128}
+          className="object-cover"
+          style={{
+            clipPath: "inset(0 0 0 30%)",
+          }}
+        />
+      </div>
+
       {/* Process Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="pb-20">
         <div className="container px-4 mx-auto">
           <div className="text-center mb-12">
-            <div className="text-purple-600 mb-8">Process</div>
+            <Badge
+              variant="outline"
+              className="text-purple-500 text-md font-medium border-purple-600 rounded-full px-4 py-2 mb-8"
+            >
+              Process
+            </Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-8">
               How We Turn{" "}
               <span className="text-violet-500">Ideas Into Reality</span>
@@ -132,8 +157,22 @@ export default function PortfolioPage() {
         </div>
       </section>
 
+      {/* Decorative Circle */}
+      <div className="transform translate-y-3/4">
+        <Image
+          src="/images/hero-circle.png"
+          alt="hero section"
+          width={128}
+          height={128}
+          className="object-cover"
+          style={{
+            clipPath: "inset(0 0 0 30%)",
+          }}
+        />
+      </div>
+
       {/* CTA Section */}
-      <section className="py-20">
+      <section className=" pb-10">
         <div className="container px-4 mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
             Let&apos;s Build Your{" "}

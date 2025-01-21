@@ -24,7 +24,7 @@ export default function MainNavbar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 top-0 z-50 w-full">
+      <header className="fixed top-0 left-0 right-0 z-50 w-full">
         <nav
           className={`flex flex-wrap items-center shadown-md justify-between p-3 border-2 rounded-lg mx-4 md:mx-10 my-3 transition-colors ${contactPageNav}`}
         >
