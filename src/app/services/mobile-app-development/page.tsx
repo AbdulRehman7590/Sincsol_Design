@@ -7,6 +7,7 @@ import ProcessStep from "@/components/process-step";
 import ValueCard from "@/components/value-card";
 import Footer from "@/components/footer";
 import { solutions1, solutions2 } from "@/lib/constants";
+import { Badge } from "@/components/ui/badge";
 
 export default function MobileAppDevelopment() {
   return (
@@ -65,10 +66,29 @@ export default function MobileAppDevelopment() {
         </div>
       </section>
 
+      {/* Decorative Circle */}
+      <div className="absolute transform -translate-y-1/2">
+        <Image
+          src="/images/hero-circle.png"
+          alt="hero section"
+          width={172}
+          height={172}
+          className="object-cover"
+          style={{
+            clipPath: "inset(0 0 25% 20%)",
+          }}
+        />
+      </div>
+
       {/* Process Section */}
-      <section className="min-h-[75vh] py-20 bg-gray-50">
+      <section className="min-h-[75vh] pt-20 pb-6 bg-gray-50">
         <div className="text-center mb-12">
-          <div className="text-purple-600 mb-8">Process</div>
+          <Badge
+            variant="outline"
+            className="text-[#8B5CF6] text-md border-[#8B5CF6] rounded-full px-4 py-2 mb-8"
+          >
+            Process
+          </Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
             Our Proven Process For{" "}
             <span className="text-violet-500">
@@ -80,8 +100,22 @@ export default function MobileAppDevelopment() {
         <ProcessStep />
       </section>
 
+      {/* Decorative Circle */}
+      <div className="transform translate-y-1/2">
+        <Image
+          src="/images/hero-circle.png"
+          alt="hero section"
+          width={172}
+          height={172}
+          className="object-cover"
+          style={{
+            clipPath: "inset(0 0 0 20%)",
+          }}
+        />
+      </div>
+
       {/* Solutions Grid */}
-      <section id="values" className="min-h-[75vh] py-16 px-20 mx-20">
+      <section id="values" className="min-h-[75vh] pb-16 px-20 mx-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {solutions1.map((value) => (
             <ValueCard key={value.title} {...value} />
@@ -105,6 +139,19 @@ export default function MobileAppDevelopment() {
 
       {/* CTA Section */}
       <section className="py-20">
+        {/* Decorative Circle */}
+        <div className="absolute">
+          <Image
+            src="/images/hero-circle.png"
+            alt="hero section"
+            width={172}
+            height={172}
+            className="object-cover"
+            style={{
+              clipPath: "inset(0 0 0 20%)",
+            }}
+          />
+        </div>
         <div className="container px-4 mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
             Book a{" "}

@@ -41,7 +41,7 @@ export default function Home() {
       <section className="min-h-screen bg-gradient-to-t from-[#f4e4c4]/80 to-[#f6e2e5]">
         <div className="circle-decoration top-36 left-12" />
 
-        <div className="container pt-48 pb-20 mx-12 px-4 grid lg:grid-cols-2 gap-20 items-center">
+        <div className="container pt-48 pb-20 px-12 grid lg:grid-cols-2 gap-20 items-center">
           <div className="space-y-8 max-w-xl">
             <h1 className="text-5xl font-bold leading-tight">
               Let&apos;s Build <span className="text-[#8B5CF6]">{"{}"}</span>{" "}
@@ -80,38 +80,69 @@ export default function Home() {
             </div>
           </div>
           <div className="relative grid">
-            <div className="z-10">
-              <Image
-                src="/images/person.png"
-                alt="Remote collaboration"
-                width={300}
-                height={300}
-                className="transform -translate-x-3/4 -translate-y-10"
-              />
-            </div>
-            <div className="z-0">
-              <Image
-                src="/images/group.png"
-                alt="Project showcase"
-                fill
-                className="transform -translate-x-24 translate-y-8"
-              />
-            </div>
-            <div className=" z-10">
-              <Image
-                src="/images/graph.png"
-                alt="Analytics dashboard"
-                width={300}
-                height={300}
-                className="transform translate-x-3/4 translate-y-3/4"
-              />
-            </div>
+            {/* Decorative Images */}
+            <Image
+              src="/images/dec-star_arrow.png"
+              alt="Double Circle"
+              width={128}
+              height={128}
+              className="absolute -top-12 right-40 z-10"
+            />
+            <Image
+              src="/images/dec-double_circle.png"
+              alt="Double Circle"
+              width={64}
+              height={64}
+              className="absolute -top-12 -left-56 z-10"
+            />
+            <Image
+              src="/images/dec-tri.png"
+              alt="Triangle"
+              width={96}
+              height={96}
+              className="absolute -bottom-24 -left-48 z-10"
+            />
+            {/* Main Images */}
+            <Image
+              src="/images/person.png"
+              alt="Remote collaboration"
+              width={300}
+              height={300}
+              className="transform -translate-x-1/2 -translate-y-10 z-10"
+            />
+            <Image
+              src="/images/group.png"
+              alt="Project showcase"
+              fill
+              className="transform -translate-x-24 translate-y-8 z-0"
+            />
+            <Image
+              src="/images/graph.png"
+              alt="Analytics dashboard"
+              width={300}
+              height={300}
+              className="transform translate-x-3/4 translate-y-3/4 z-10"
+            />
           </div>
         </div>
       </section>
 
+      {/* Decorative Circle */}
+      <div className="flex justify-end mr-6 transform translate-y-1/2">
+        <Image
+          src="/images/hero-circle.png"
+          alt="hero section"
+          width={128}
+          height={128}
+          className="object-cover"
+          style={{
+            clipPath: "inset(0 20% 0 0)",
+          }}
+        />
+      </div>
+
       {/* Stand Out Section */}
-      <section className="py-20">
+      <section className="pb-20">
         <div className="max-w-6xl mx-auto px-4 py-6">
           {/* Header section */}
           <div className="text-center mb-16">
@@ -132,11 +163,14 @@ export default function Home() {
           </div>
 
           {/* Features grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mx-auto">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="relative bg-white shadow-md rounded-lg overflow-hidden p-6 text-center"
+                className={
+                  "relative bg-white shadow-md rounded-lg overflow-hidden p-6 text-center" +
+                  ((index + 1) % 2 === 0 ? " lg:mt-40" : "")
+                }
               >
                 <div className="absolute inset-0 h-24 bg-gradient-to-b from-[#b69ff4] to-[#fabda9] rounded-b-full" />
                 <div className="relative z-10">
@@ -160,9 +194,7 @@ export default function Home() {
       </section>
 
       {/* Service Slider */}
-      <section className="py-10">
-        <div className="circle-decoration top-12 left-12" />
-
+      <section className="pt-10">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <Badge
@@ -258,8 +290,8 @@ export default function Home() {
                   );
                 })}
               </CarouselContent>
-              <CarouselPrevious className="hidden md:flex -left-12" />
-              <CarouselNext className="hidden md:flex -right-12" />
+              <CarouselPrevious className="flex items-center justify-center -left-6 md:-left-12" />
+              <CarouselNext className="flex items-center justify-center -right-6 md:-right-12" />
             </Carousel>
             <div className="flex justify-center gap-2 mt-6">
               {services.map((_, index) => (
@@ -276,8 +308,35 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Filled Circle */}
+      <div className="flex justify-end mr-6">
+        <Image
+          src="/images/dec-fill.png"
+          alt="hero section"
+          width={128}
+          height={128}
+          className="object-cover"
+          style={{
+            clipPath: "inset(0 10% 0 0)",
+          }}
+        />
+      </div>
+
       {/* Testimonials */}
-      <section className="py-10">
+      <section className="pb-10">
+        {/* Decorative Circle */}
+        <div className="absolute transform translate-y-1/2">
+          <Image
+            src="/images/hero-circle.png"
+            alt="hero section"
+            width={144}
+            height={144}
+            className="object-cover"
+            style={{
+              clipPath: "inset(0 0 0 30%)",
+            }}
+          />
+        </div>
         <div className="container mx-auto max-w-7xl">
           {/* Header */}
           <div className="grid grid-cols-1 md:grid-cols-2 mx-12 items-center">
@@ -370,8 +429,8 @@ export default function Home() {
 
       {/* Pricing Section */}
       <section className="bg-gradient-to-t from-[#f4e4c4]/80 to-[#f6e2e5] py-12 md:py-16 lg:py-20">
-        <div className="container mx-12">
-          <div className="grid gap-8 lg:grid-cols-2">
+        <div className="container px-12">
+          <div className="grid gap-20 lg:grid-cols-2">
             {/* Left Column */}
             <div className="space-y-8">
               <div className="space-y-4">
@@ -485,6 +544,19 @@ export default function Home() {
                     <p className="text-5xl font-bold text-purple-500">5+</p>
                     <p className="text-gray-600">Proprietary Products</p>
                   </div>
+                  {/* Decorative Circle */}
+                  <div className="flex justify-end transform -translate-y-1/2">
+                    <Image
+                      src="/images/hero-circle.png"
+                      alt="hero section"
+                      width={128}
+                      height={128}
+                      className="object-cover"
+                      style={{
+                        clipPath: "inset(0 20% 0 0)",
+                      }}
+                    />
+                  </div>
                 </div>
               </Card>
             </div>
@@ -493,7 +565,20 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-10">
+      <section className="pt-20 pb-10">
+        {/* Decorative Circle */}
+        <div className="absolute">
+          <Image
+            src="/images/hero-circle.png"
+            alt="hero section"
+            width={172}
+            height={172}
+            className="object-cover"
+            style={{
+              clipPath: "inset(0 0 0 20%)",
+            }}
+          />
+        </div>
         <div className="container px-4 mx-auto text-center">
           <h2 className="text-4xl mx-auto max-w-4xl md:text-5xl font-bold mb-8">
             Book a{" "}

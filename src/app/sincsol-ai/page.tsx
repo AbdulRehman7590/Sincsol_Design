@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import AINavbar from "@/components/ai-navbar";
 import Footer from "@/components/footer";
 import ValueCard from "@/components/value-card";
@@ -57,11 +58,27 @@ export default function SincSolAIPage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="min-h-[70vh] py-20">
-        <div className="text-center mb-6">
-          <h3 className="text-lg tracking-wider text-[#8B5CF6] mb-14">
+      <section id="services" className="min-h-[70vh] pt-12 pb-20">
+        {/* Decorative Circle */}
+        <div className="flex justify-end mr-4 transform translate-y-1/2">
+          <Image
+            src="/images/hero-circle.png"
+            alt="hero section"
+            width={172}
+            height={172}
+            className="object-cover"
+            style={{
+              clipPath: "inset(0 20% 0 0)",
+            }}
+          />
+        </div>
+        <div className="text-center">
+          <Badge
+            variant="outline"
+            className="text-[#8B5CF6] text-md border-[#8B5CF6] tracking-wider rounded-full px-4 py-2 mb-8"
+          >
             Services
-          </h3>
+          </Badge>
           <h2 className="text-5xl font-bold mb-4">
             Our Expertise In{" "}
             <span className="text-[#8B5CF6]">
@@ -79,11 +96,27 @@ export default function SincSolAIPage() {
 
       {/* Case Studies Section */}
       <section id="case-studies" className="py-10">
+        {/* Decorative Circle */}
+        <div className="absolute">
+          <Image
+            src="/images/hero-circle.png"
+            alt="hero section"
+            width={172}
+            height={172}
+            className="object-cover"
+            style={{
+              clipPath: "inset(0 0 0 20%)",
+            }}
+          />
+        </div>
         <div className="w-full max-w-7xl mx-auto px-4 py-16 md:px-6">
           <div className="text-center mb-16">
-            <span className="block text-md text-[#8B5CF6] mb-8">
+            <Badge
+              variant="outline"
+              className="text-[#8B5CF6] text-md border-[#8B5CF6] rounded-full px-4 py-2 mb-8"
+            >
               Case Studies
-            </span>
+            </Badge>
             <h1 className="text-4xl max-w-2xl mx-auto md:text-5xl font-bold tracking-tight mb-2">
               Driving Success Through{" "}
               <span className="text-[#8B5CF6]">Proven Solutions</span>
@@ -182,9 +215,27 @@ export default function SincSolAIPage() {
 
       {/* Team Section */}
       <section id="ai-team" className="min-h-[75vh] py-20">
+        {/* Decorative Circle */}
+        <div className="absolute">
+          <Image
+            src="/images/hero-circle.png"
+            alt="hero section"
+            width={172}
+            height={172}
+            className="object-cover"
+            style={{
+              clipPath: "inset(0 0 0 20%)",
+            }}
+          />
+        </div>
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <p className="text-md text-[#8B5CF6] mb-6">Our AI Team</p>
+            <Badge
+              variant="outline"
+              className="text-[#8B5CF6] text-md border-[#8B5CF6] rounded-full px-4 py-2 mb-8"
+            >
+              Our AI Team
+            </Badge>
             <h2 className="text-4xl font-bold">
               Empowering Your Business <br /> with{" "}
               <span className="text-[#8B5CF6]">AI Expertise</span>
