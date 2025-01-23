@@ -120,7 +120,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Decorative Circle */}
-      <div className="transform translate-y-3/4">
+      <div className="transform translate-y-3/4 hidden sm:block">
         <Image
           src="/images/hero-circle.png"
           alt="hero section"
@@ -134,7 +134,7 @@ export default function PortfolioPage() {
       </div>
 
       {/* Process Section */}
-      <section className="pb-20">
+      <section className="pb-20 sm:pt-12">
         <div className="container px-4 mx-auto">
           <div className="text-center mb-12">
             <Badge
@@ -158,7 +158,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Decorative Circle */}
-      <div className="transform translate-y-3/4">
+      <div className="transform translate-y-3/4 hidden sm:block">
         <Image
           src="/images/hero-circle.png"
           alt="hero section"
@@ -172,7 +172,7 @@ export default function PortfolioPage() {
       </div>
 
       {/* CTA Section */}
-      <section className=" pb-10">
+      <section className="sm:pt-12 pb-10">
         <div className="container px-4 mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
             Let&apos;s Build Your{" "}

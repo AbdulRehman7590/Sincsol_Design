@@ -58,7 +58,7 @@ export default function SincSolAIPage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="min-h-[70vh] pt-12 pb-20">
+      <section id="services" className="min-h-[70vh] pt-48 lg:pt-12 pb-20">
         {/* Decorative Circle */}
         <div className="flex justify-end mr-4 transform translate-y-1/2">
           <Image
@@ -66,7 +66,7 @@ export default function SincSolAIPage() {
             alt="hero section"
             width={172}
             height={172}
-            className="object-cover"
+            className="object-cover hidden sm:block"
             style={{
               clipPath: "inset(0 20% 0 0)",
             }}
@@ -97,7 +97,7 @@ export default function SincSolAIPage() {
       {/* Case Studies Section */}
       <section id="case-studies" className="py-10">
         {/* Decorative Circle */}
-        <div className="absolute">
+        <div className="absolute hidden sm:block">
           <Image
             src="/images/hero-circle.png"
             alt="hero section"
@@ -109,7 +109,7 @@ export default function SincSolAIPage() {
             }}
           />
         </div>
-        <div className="w-full max-w-7xl mx-auto px-4 py-16 md:px-6">
+        <div className="w-full max-w-7xl mx-auto px-4 lg:py-16 md:px-6">
           <div className="text-center mb-16">
             <Badge
               variant="outline"
@@ -216,7 +216,7 @@ export default function SincSolAIPage() {
       {/* Team Section */}
       <section id="ai-team" className="min-h-[75vh] py-20">
         {/* Decorative Circle */}
-        <div className="absolute">
+        <div className="absolute hidden sm:block">
           <Image
             src="/images/hero-circle.png"
             alt="hero section"

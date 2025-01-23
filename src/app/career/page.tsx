@@ -94,7 +94,7 @@ export default function CareerPage() {
           alt="hero section"
           width={128}
           height={128}
-          className="object-cover"
+          className="object-cover hidden sm:block"
         />
       </div>
 
@@ -130,7 +130,7 @@ export default function CareerPage() {
       <section className="mt-8 py-20 min-h-[75vh]">
         <div className="container px-4 mx-auto">
           {/* Decorative Circle */}
-          <div className="transform translate-y-3/4">
+          <div className="transform translate-y-3/4 hidden sm:block">
             <Image
               src="/images/hero-circle.png"
               alt="hero section"
@@ -178,7 +178,7 @@ export default function CareerPage() {
                 alt="hero section"
                 width={128}
                 height={128}
-                className="object-cover mr-32 mb-8"
+                className="object-cover mr-32 mb-8 hidden sm:block"
               />
               <h1 className="text-5xl font-bold">
                 Your Guide to{" "}
@@ -204,7 +204,7 @@ export default function CareerPage() {
       </section>
 
       {/* Decorative Circle */}
-      <div className="transform translate-y-3/4">
+      <div className="transform translate-y-3/4 hidden sm:block">
         <Image
           src="/images/hero-circle.png"
           alt="hero section"
@@ -218,7 +218,7 @@ export default function CareerPage() {
       </div>
 
       {/* CTA Section */}
-      <section className="pb-10">
+      <section className="pb-12 sm:pt-12">
         <div className="container px-4 mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
             Let&apos;s Build the{" "}

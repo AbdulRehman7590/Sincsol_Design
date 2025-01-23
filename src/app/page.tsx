@@ -39,7 +39,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="min-h-screen bg-gradient-to-t from-[#f4e4c4]/80 to-[#f6e2e5]">
-        <div className="circle-decoration top-36 left-12" />
+        <div className="animate-bounce circle-decoration top-36 left-12" />
 
         <div className="container pt-48 pb-20 px-12 grid lg:grid-cols-2 gap-20 items-center">
           <div className="space-y-8 max-w-xl">
@@ -81,48 +81,77 @@ export default function Home() {
           </div>
           <div className="relative grid">
             {/* Decorative Images */}
-            <Image
-              src="/images/dec-star_arrow.png"
-              alt="Double Circle"
-              width={128}
-              height={128}
-              className="absolute -top-12 right-40 z-10"
-            />
-            <Image
-              src="/images/dec-double_circle.png"
-              alt="Double Circle"
-              width={64}
-              height={64}
-              className="absolute -top-12 -left-56 z-10"
-            />
-            <Image
-              src="/images/dec-tri.png"
-              alt="Triangle"
-              width={96}
-              height={96}
-              className="absolute -bottom-24 -left-48 z-10"
-            />
+            <div>
+              <Image
+                src="/images/dec-star_arrow.png"
+                alt="Double Circle"
+                width={128}
+                height={128}
+                className="absolute -top-12 right-40 z-10 hidden sm:block"
+              />
+              <Image
+                src="/images/dec-double_circle.png"
+                alt="Double Circle"
+                width={64}
+                height={64}
+                className="absolute -top-12 -left-56 z-10 hidden sm:block"
+              />
+              <Image
+                src="/images/dec-tri.png"
+                alt="Triangle"
+                width={96}
+                height={96}
+                className="absolute -bottom-24 -left-48 z-10 hidden sm:block"
+              />
+            </div>
             {/* Main Images */}
-            <Image
-              src="/images/person.png"
-              alt="Remote collaboration"
-              width={300}
-              height={300}
-              className="transform -translate-x-1/2 -translate-y-10 z-10"
-            />
-            <Image
-              src="/images/group.png"
-              alt="Project showcase"
-              fill
-              className="transform -translate-x-24 translate-y-8 z-0"
-            />
-            <Image
-              src="/images/graph.png"
-              alt="Analytics dashboard"
-              width={300}
-              height={300}
-              className="transform translate-x-3/4 translate-y-3/4 z-10"
-            />
+            <div className="sm:hidden flex flex-col items-center space-y-4">
+              {/* Layout for smaller screens */}
+              <Image
+                src="/images/person.png"
+                alt="Remote collaboration"
+                width={300}
+                height={300}
+                className="z-10"
+              />
+              <Image
+                src="/images/group.png"
+                alt="Project showcase"
+                width={300}
+                height={300}
+                className="z-0 object-contain"
+              />
+              <Image
+                src="/images/graph.png"
+                alt="Analytics dashboard"
+                width={300}
+                height={300}
+                className="z-10"
+              />
+            </div>
+            <div className="hidden sm:grid">
+              {/* Layout for larger screens */}
+              <Image
+                src="/images/person.png"
+                alt="Remote collaboration"
+                width={300}
+                height={300}
+                className="transform -translate-x-1/2 -translate-y-10 z-10"
+              />
+              <Image
+                src="/images/group.png"
+                alt="Project showcase"
+                fill
+                className="transform -translate-x-24 translate-y-8 z-0"
+              />
+              <Image
+                src="/images/graph.png"
+                alt="Analytics dashboard"
+                width={300}
+                height={300}
+                className="transform translate-x-3/4 translate-y-3/4 z-10"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -134,7 +163,7 @@ export default function Home() {
           alt="hero section"
           width={128}
           height={128}
-          className="object-cover"
+          className="object-cover hidden sm:block"
           style={{
             clipPath: "inset(0 20% 0 0)",
           }}
@@ -142,7 +171,7 @@ export default function Home() {
       </div>
 
       {/* Stand Out Section */}
-      <section className="pb-20">
+      <section className="py-20 lg:pb-20">
         <div className="max-w-6xl mx-auto px-4 py-6">
           {/* Header section */}
           <div className="text-center mb-16">
@@ -325,7 +354,7 @@ export default function Home() {
       {/* Testimonials */}
       <section className="pb-10">
         {/* Decorative Circle */}
-        <div className="absolute transform translate-y-1/2">
+        <div className="absolute transform translate-y-1/2 hidden sm:block">
           <Image
             src="/images/hero-circle.png"
             alt="hero section"
@@ -545,7 +574,7 @@ export default function Home() {
                     <p className="text-gray-600">Proprietary Products</p>
                   </div>
                   {/* Decorative Circle */}
-                  <div className="flex justify-end transform -translate-y-1/2">
+                  <div className="flex justify-end lg:transform lg:-translate-y-1/2">
                     <Image
                       src="/images/hero-circle.png"
                       alt="hero section"
@@ -567,7 +596,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="pt-20 pb-10">
         {/* Decorative Circle */}
-        <div className="absolute">
+        <div className="absolute hidden sm:block">
           <Image
             src="/images/hero-circle.png"
             alt="hero section"

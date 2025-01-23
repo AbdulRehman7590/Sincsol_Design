@@ -31,7 +31,7 @@ export default function MobileAppDevelopment() {
       />
 
       {/* Why Choose Section */}
-      <section className="min-h-[75vh] grid md:grid-cols-2 gap-12 max-w-7xl mx-auto pt-28 pb-6">
+      <section className="min-h-[75vh] grid md:grid-cols-2 gap-12 max-w-7xl mx-auto px-2 pt-28 pb-6">
         {/* Text Column */}
         <div className="space-y-12">
           <h2 className="mt-4 text-4xl font-bold leading-relaxed">
@@ -61,13 +61,13 @@ export default function MobileAppDevelopment() {
             alt="PC"
             width={400}
             height={200}
-            className="transform -translate-x-1/3 -translate-y-1/3 z-10 rounded-lg shadow-lg"
+            className="lg:transform lg:-translate-x-1/3 lg:-translate-y-1/3 z-10 rounded-lg shadow-lg"
           />
         </div>
       </section>
 
       {/* Decorative Circle */}
-      <div className="absolute transform -translate-y-1/2">
+      <div className="absolute transform -translate-y-1/2 hidden sm:block">
         <Image
           src="/images/hero-circle.png"
           alt="hero section"
@@ -101,7 +101,7 @@ export default function MobileAppDevelopment() {
       </section>
 
       {/* Decorative Circle */}
-      <div className="transform translate-y-1/2">
+      <div className="transform translate-y-1/2 hidden sm:block">
         <Image
           src="/images/hero-circle.png"
           alt="hero section"
@@ -115,7 +115,7 @@ export default function MobileAppDevelopment() {
       </div>
 
       {/* Solutions Grid */}
-      <section id="values" className="min-h-[75vh] pb-16 px-20 mx-20">
+      <section id="values" className="min-h-[75vh] pb-16 px-20 lg:mx-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {solutions1.map((value) => (
             <ValueCard key={value.title} {...value} />
@@ -146,7 +146,7 @@ export default function MobileAppDevelopment() {
             alt="hero section"
             width={172}
             height={172}
-            className="object-cover"
+            className="object-cover hidden sm:block"
             style={{
               clipPath: "inset(0 0 0 20%)",
             }}

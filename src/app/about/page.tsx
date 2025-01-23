@@ -25,7 +25,7 @@ export default function AboutPage() {
       />
 
       {/* Journey Section */}
-      <section className="min-h-[75vh] grid md:grid-cols-2 gap-12 max-w-7xl mx-auto pt-28 pb-6">
+      <section className="min-h-[75vh] grid md:grid-cols-2 gap-12 max-w-7xl mx-auto px-4 pt-28 pb-6">
         {/* Text Column */}
         <div className="space-y-12">
           <h2 className="mt-4 text-4xl font-bold leading-relaxed">
@@ -50,20 +50,20 @@ export default function AboutPage() {
             alt="Meet"
             width={425}
             height={275}
-            className="rounded-lg shadow-lg"
+            className="rounded-lg"
           />
           <Image
             src="/images/laptop.png"
             alt="PC"
             width={400}
             height={200}
-            className="transform -translate-x-1/3 -translate-y-1/3 z-10 rounded-lg shadow-lg"
+            className="lg:transform lg:-translate-x-1/3 lg:-translate-y-1/3 z-10 rounded-lg shadow-lg"
           />
         </div>
       </section>
 
       {/* Decorative Circle */}
-      <div className="transform translate-y-1/2">
+      <div className="transform translate-y-1/2  hidden sm:block">
         <Image
           src="/images/hero-circle.png"
           alt="hero section"
@@ -77,7 +77,7 @@ export default function AboutPage() {
       </div>
 
       {/* Mission Section */}
-      <section className="min-h-[75vh] max-w-6xl mx-auto px-4 pb-10">
+      <section className="min-h-[75vh] py-10 max-w-6xl mx-auto px-4">
         <h1
           className="text-7xl font-bold text-center text-transparent"
           style={{
@@ -129,7 +129,7 @@ export default function AboutPage() {
           alt="hero section"
           width={128}
           height={128}
-          className="object-cover"
+          className="object-cover hidden sm:block"
         />
       </div>
 
@@ -147,7 +147,7 @@ export default function AboutPage() {
             <div className="bg-purple-600 absolute z-0 h-[535px] w-[400px] transform translate-x-1/4 translate-y-8" />
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-6 relative">
             <div className="flex items-center justify-between">
               <div>
                 <Badge
@@ -187,7 +187,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section id="values" className="pt-12 px-20 mx-20">
+      <section id="values" className="pt-12 px-20 lg:mx-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {values1.map((value) => (
             <ValueCard key={value.title} {...value} />
@@ -216,6 +216,7 @@ export default function AboutPage() {
           alt="hero section"
           width={256}
           height={256}
+          className="hidden sm:block"
         />
       </div>
 
