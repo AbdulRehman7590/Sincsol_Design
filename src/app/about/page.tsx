@@ -134,9 +134,9 @@ export default function AboutPage() {
       </div>
 
       {/* Vision Section */}
-      <section className="min-h-[75vh] py-40">
+      <section className="min-h-[75vh] py-8 lg:py-40">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="relative flex items-center justify-center">
+          <div className="relative flex items-center justify-center hidden sm:block">
             <Image
               src="/images/team/waqas.png"
               alt="Team member"
@@ -147,7 +147,7 @@ export default function AboutPage() {
             <div className="bg-purple-600 absolute z-0 h-[535px] w-[400px] transform translate-x-1/4 translate-y-8" />
           </div>
 
-          <div className="space-y-6 relative">
+          <div className="space-y-6 relative px-4 sm:px-0">
             <div className="flex items-center justify-between">
               <div>
                 <Badge
@@ -165,7 +165,7 @@ export default function AboutPage() {
                 alt="hero section"
                 width={128}
                 height={128}
-                className="object-cover mr-32 mb-8"
+                className="object-cover mr-32 mb-8 hidden sm:block"
               />
             </div>
             <blockquote className="border-l-2 border-purple-600 px-4 text-sm text-purple-600 italic mb-4 max-w-xl">
@@ -187,7 +187,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section id="values" className="pt-12 px-20 lg:mx-20">
+      <section id="values" className="lg:pt-12 px-20 lg:mx-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {values1.map((value) => (
             <ValueCard key={value.title} {...value} />
