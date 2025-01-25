@@ -26,7 +26,11 @@ export default function MainNavbar() {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 w-full">
         <nav
-          className={`flex flex-wrap items-center shadown-md justify-between p-3 border-2 rounded-lg mx-4 md:mx-10 my-3 transition-colors ${contactPageNav}`}
+          className={`flex flex-wrap items-center justify-between p-3 border border-gray-200 rounded-lg mx-4 md:mx-10 my-3 shadow-lg transition-colors ${contactPageNav} backdrop-blur-lg bg-white/50`}
+          style={{
+            boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
+            backdropFilter: "blur(10px)",
+          }}
         >
           {/* Logo */}
           <div className="flex items-center justify-between w-full lg:w-auto">

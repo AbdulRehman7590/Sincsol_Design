@@ -87,21 +87,21 @@ export default function Home() {
                 alt="Double Circle"
                 width={128}
                 height={128}
-                className="absolute -top-12 right-40 z-10 hidden sm:block"
+                className="animate-fade absolute -top-12 right-40 z-10 hidden sm:block"
               />
               <Image
                 src="/images/dec-double_circle.png"
                 alt="Double Circle"
                 width={64}
                 height={64}
-                className="absolute -top-12 -left-56 z-10 hidden sm:block"
+                className="animate-fade-right absolute -top-12 -left-56 z-10 hidden sm:block"
               />
               <Image
                 src="/images/dec-tri.png"
                 alt="Triangle"
                 width={96}
                 height={96}
-                className="absolute -bottom-24 -left-48 z-10 hidden sm:block"
+                className="animate-rotate absolute -bottom-24 -left-48 z-10 hidden sm:block"
               />
             </div>
             {/* Main Images */}

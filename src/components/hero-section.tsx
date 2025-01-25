@@ -18,8 +18,8 @@ export default function HeroSection({
 }: HeroSectionProps) {
   return (
     <section className="min-h-screen pt-64 pb-12 bg-gradient-to-b from-white to-[#c6b4f6] relative overflow-hidden">
-      <div className="circle-decoration top-12 left-12" />
-      <div className="circle-decoration bottom-12 right-12" />
+      <div className="animate-bounce circle-decoration top-36 left-12" />
+      <div className="animate-bounce circle-decoration bottom-12 right-12" />
 
       <div className="container px-4 mx-auto text-center">
         <p className="text-sm tracking-wider text-black mb-6">{line}</p>
