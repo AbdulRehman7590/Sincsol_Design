@@ -22,7 +22,7 @@ export default function AIProduct({
 }: AIProductProps) {
   return (
     <motion.div
-      className="absolute w-[350px] bg-white/10 backdrop-blur-sm rounded-full flex px-6 py-2 text-white cursor-pointer bg-gradient-to-r from-[#cfced0]/60 to-[#ae5ec5]"
+      className="md:absolute w-[350px] bg-white/10 backdrop-blur-sm rounded-full flex px-6 py-2 text-white cursor-pointer bg-gradient-to-r from-[#cfced0]/60 to-[#ae5ec5] mb-4 md:mb-0"
       style={position}
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}

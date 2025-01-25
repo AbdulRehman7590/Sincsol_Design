@@ -194,7 +194,7 @@ export default function SincSolAIPage() {
           style={{ backgroundImage: `url("/images/ai-products.png")` }}
         />
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center text-white transform translate-y-[150%]">
+          <div className="text-center text-white pt-8 md:pt-0 md:translate-y-[150%]">
             <h2 className="text-6xl font-bold mb-2">AI Products</h2>
             <h3 className="text-3xl mb-8">
               to Transform <br /> Your Business
@@ -205,7 +205,7 @@ export default function SincSolAIPage() {
             </p>
           </div>
 
-          <div className="relative h-[600px] mb-14 mx-auto">
+          <div className="relative h-auto flex flex-col items-center mt-6 md:mt-0 md:pt-0 md:mb-16 md:h-[600px] md:flex-none md:mx-auto">
             {aiProducts.map((product) => (
               <AIProduct key={product.name} {...product} />
             ))}

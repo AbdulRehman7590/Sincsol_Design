@@ -134,17 +134,17 @@ export default function AboutPage() {
       </div>
 
       {/* Vision Section */}
-      <section className="min-h-[75vh] py-8 lg:py-40">
+      <section className="min-h-[75vh] py-8 lg:py-36">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="relative flex items-center justify-center hidden sm:block">
+          <div className="relative flex items-center justify-center">
             <Image
               src="/images/team/waqas.png"
               alt="Team member"
               width={400}
               height={500}
-              className="absolute bg-black z-10 shadow-lg transform translate-x-1/3"
+              className="absolute bg-black z-10 shadow-lg transform translate-x-1/3  hidden sm:block"
             />
-            <div className="bg-purple-600 absolute z-0 h-[535px] w-[400px] transform translate-x-1/4 translate-y-8" />
+            <div className="bg-purple-600 absolute z-0 h-[535px] w-[400px] transform translate-x-1/4 translate-y-8  hidden sm:block" />
           </div>
 
           <div className="space-y-6 relative px-4 sm:px-0">
