@@ -171,9 +171,9 @@ export default function MobileAppDevelopment() {
       <Image
         src={"/images/look-screen.png"}
         alt={"Discussion Image"}
-        width={300}
-        height={400}
-        className="w-full h-[550px] object-cover"
+        width={1100}
+        height={550}
+        className="w-full object-contain"
       />
 
       <Footer />

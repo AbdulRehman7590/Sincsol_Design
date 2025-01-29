@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 export default function Footer() {
   return (
     <footer className="w-full px-6 py-12 bg-[#f4e4c4]">
-      <div className="p-8 m-5 bg-white border-[1px] rounded-lg w-[97%] box-border">
+      <div className="p-8 m-5 bg-white border-[1px] rounded-lg box-border">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
             {/* Logo and Contact Section */}

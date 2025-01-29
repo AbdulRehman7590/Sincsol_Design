@@ -405,7 +405,7 @@ export default function Home() {
             </div>
             <div>
               {/* Categories */}
-              <div className="flex items-center gap-2 mb-6">
+              <div className="flex flex-col sm:flex-row items-center gap-2 mb-6">
                 {landingProjects.map((project) => (
                   <Button
                     key={project.title}
@@ -420,14 +420,15 @@ export default function Home() {
               <Image
                 src="/images/pricing-bg.png"
                 alt="BG"
-                width={400}
-                height={300}
+                width={450}
+                height={350}
+                className="object-cover"
               />
             </div>
           </div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 mt-16">
             {landingProjects.map((project, index) => (
               <div
                 key={index}
@@ -626,9 +627,9 @@ export default function Home() {
       <Image
         src={"/images/look-screen.png"}
         alt={"Discussion Image"}
-        width={300}
-        height={400}
-        className="w-full h-[550px] object-cover"
+        width={1100}
+        height={550}
+        className="w-full object-contain"
       />
 
       <Footer />

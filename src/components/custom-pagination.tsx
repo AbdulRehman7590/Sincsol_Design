@@ -53,6 +53,7 @@ export function CustomPagination({
                   onPageChange(page as number);
                 }}
                 isActive={currentPage === page}
+                className={currentPage === page ? "bg-[#8B5CF6] text-white rounded-full" : ""}
               >
                 {page}
               </PaginationLink>

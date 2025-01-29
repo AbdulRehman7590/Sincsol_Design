@@ -99,9 +99,9 @@ export default function CareerPage() {
       </div>
 
       {/* Available Positions Section */}
-      <section id="positions" className="min-h-[75vh]">
+      <section id="positions" className="min-h-[75vh] px-4 sm:px-0">
         <div className="container mx-auto py-8 max-w-5xl">
-          <div className="mb-8">
+          <div className="mb-8 px-4">
             <h1 className="text-4xl md:text-5xl font-bold text-center my-12">
               Position <span className="text-[#6941C6]">Available</span>
             </h1>
@@ -241,9 +241,9 @@ export default function CareerPage() {
       <Image
         src="/images/career-bg.png"
         alt="Discussion Image"
-        width={300}
-        height={400}
-        className="w-full h-[550px] object-cover"
+        width={1100}
+        height={550}
+        className="w-full object-contain"
       />
 
       <Footer />
