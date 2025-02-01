@@ -19,7 +19,7 @@ export default function HeroSection({
   return (
     <section className="min-h-screen pt-64 pb-12 bg-gradient-to-b from-white to-[#c6b4f6] relative overflow-hidden">
       <div className="animate-bounce circle-decoration top-36 left-12" />
-      <div className="animate-bounce circle-decoration bottom-12 right-12" />
+      <div className="animate-bounce circle-decoration bottom-12 right-12 hidden sm:block" />
 
       <div className="container px-4 mx-auto text-center">
         <p className="text-sm tracking-wider text-black mb-6">{line}</p>
@@ -49,7 +49,7 @@ export default function HeroSection({
           alt="hero section"
           width={128}
           height={128}
-          className="object-cover"
+          className="object-contain hidden sm:block"
           style={{
             clipPath: "inset(0 0 0 30%)",
           }}

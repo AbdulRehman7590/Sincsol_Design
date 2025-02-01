@@ -62,21 +62,23 @@ export default function Home() {
               >
                 <Link href="/contact">Contact Now</Link>
               </Button>
-              <Button
-                asChild
-                variant="outline"
-                className="border-[#8B5CF6] text-black bg-transparent hover:bg-black/8 px-2 py-6 rounded-lg text-lg"
-              >
-                <Link href="/contact">
-                  <ChevronRight className="h-4 w-4" />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                className="text-black font-bold hover:text-[#8B5CF6] px-2 py-6 text-lg"
-              >
-                <Link href="/contact">Book a Demo Today</Link>
-              </Button>
+              <div className="flex gap-2">
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border-[#8B5CF6] text-black bg-transparent hover:bg-black/8 px-2 py-6 rounded-lg text-lg"
+                >
+                  <Link href="/contact">
+                    <ChevronRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button
+                  asChild
+                  className="text-black font-bold hover:text-[#8B5CF6] px-2 py-6 text-lg"
+                >
+                  <Link href="/contact">Book a Demo Today</Link>
+                </Button>
+              </div>
             </div>
           </div>
           <div className="relative grid">
@@ -386,31 +388,33 @@ export default function Home() {
                 <br />
                 <span className="text-purple-500">ATTENTION?</span>
               </h2>
-              <Button
-                asChild
-                variant="secondary"
-                className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white mr-4 px-6 py-6 rounded-lg text-lg"
-              >
-                <Link href="#">See All Projects</Link>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                className="border-[#8B5CF6] text-black bg-transparent hover:bg-black/8 px-2 py-6 rounded-lg text-lg"
-              >
-                <Link href="#">
-                  <ChevronRight className="h-4 w-4" />
-                </Link>
-              </Button>
+              <div className="flex justify-center sm:justify-start">
+                <Button
+                  asChild
+                  variant="secondary"
+                  className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white mr-4 px-6 py-6 rounded-lg text-lg"
+                >
+                  <Link href="#">See All Projects</Link>
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border-[#8B5CF6] text-black bg-transparent hover:bg-black/8 px-2 py-6 rounded-lg text-lg"
+                >
+                  <Link href="#">
+                    <ChevronRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
             </div>
             <div>
               {/* Categories */}
-              <div className="flex flex-col sm:flex-row items-center gap-2 mb-6">
+              <div className="flex items-center flex-wrap justify-center sm:justify-start gap-2 mb-6">
                 {landingProjects.map((project) => (
                   <Button
                     key={project.title}
                     variant="outline"
-                    className="px-4 py-1 rounded-lg border-black"
+                    className="px-2 sm:px-4 py-1 rounded-lg border-black"
                   >
                     {project.category}
                   </Button>
@@ -537,9 +541,12 @@ export default function Home() {
                     <div>
                       <Button
                         variant="outline"
-                        className="px-6 py-2 rounded-lg text-[#8B5CF6] border-[#8B5CF6] hover:bg-[#7C3AED] hover:text-white"
+                        className="px-2 mx-2 sm:px-6 py-2 rounded-lg text-[#8B5CF6] border-[#8B5CF6] hover:bg-[#7C3AED] hover:text-white"
                       >
-                        <Link href="/contact">Contact Us</Link>
+                        <Link href="/contact">
+                        <span className="block sm:hidden">Contact</span>
+                        <span className="hidden sm:block">Contact Us</span>
+                        </Link>
                       </Button>
                     </div>
                   </div>
@@ -581,7 +588,7 @@ export default function Home() {
                       alt="hero section"
                       width={128}
                       height={128}
-                      className="object-cover"
+                      className="object-contain"
                       style={{
                         clipPath: "inset(0 20% 0 0)",
                       }}

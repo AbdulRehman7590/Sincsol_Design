@@ -38,21 +38,23 @@ export default function SincSolAIPage() {
             <p className="text-xl text-purple-200 mb-8">
               From Automation to Intelligence, shaping the future
             </p>
-            <Button
-              asChild
-              className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-8 mr-4 py-6 rounded-lg text-lg"
-            >
-              <Link href="#services">Explore AI Solutions</Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              className="border-[#8B5CF6] text-black bg-transparent hover:bg-black/8 px-2 py-6 rounded-lg text-lg"
-            >
-              <Link href="#services">
-                <ChevronRight className="h-4 w-4 text-[#8B5CF6]" />
-              </Link>
-            </Button>
+            <div className="flex gap-2">
+              <Button
+                asChild
+                className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white px-4 sm:px-8 py-6 rounded-lg text-lg"
+              >
+                <Link href="#services">Explore AI Solutions</Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                className="border-white border-2 sm:border sm:border-[#8B5CF6] text-black bg-transparent hover:bg-black/8 px-2 py-6 rounded-lg text-lg"
+              >
+                <Link href="#services">
+                  <ChevronRight className="h-4 w-4 text-white sm:text-[#8B5CF6]" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

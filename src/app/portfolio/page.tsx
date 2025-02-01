@@ -79,7 +79,7 @@ export default function PortfolioPage() {
               key={project.id}
               className="overflow-hidden border border-gray-200"
             >
-              <div className="flex">
+              <div className="flex items-center">
                 <div className="relative w-[200px] h-[150px]">
                   <Image
                     src={project.image}

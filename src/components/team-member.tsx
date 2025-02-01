@@ -1,49 +1,47 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselApi,
+} from "@/components/ui/carousel";
 
 interface TeamMemberProps {
   team: { name: string; image: string; position: string }[];
 }
 
 export default function TeamMember({ team }: TeamMemberProps) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [emblaApi, setEmblaApi] = useState<CarouselApi | null>(null);
 
-  const itemsPerPage = 4;
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex > 0 ? prevIndex - 1 : team.length - itemsPerPage
-    );
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex < team.length - itemsPerPage ? prevIndex + 1 : 0
-    );
-  };
+  useEffect(() => {
+    if (emblaApi) {
+      emblaApi.on("select", () => {
+        setActiveIndex(emblaApi.selectedScrollSnap());
+      });
+    }
+  }, [emblaApi]);
 
   return (
-    <div className="relative max-w-6xl mx-auto">
-      <div className="overflow-hidden">
-        <div
-          className="flex transition-transform duration-300"
-          style={{
-            transform: `translateX(-${currentIndex * (100 / itemsPerPage)}%)`,
-            width: `${(team.length / itemsPerPage) * 100}%`,
-          }}
-        >
-          {team.map((member) => (
-            <div
-              key={member.name}
-              className="flex px-4"
-              style={{ width: `${100 / itemsPerPage}%` }}
-            >
+    <div className="relative max-w-6xl mx-auto py-10 px-4 bg-purple-50 rounded-lg shadow-lg">
+      <Carousel
+        opts={{ align: "start", loop: true }}
+        className="w-full"
+        setApi={setEmblaApi}
+      >
+        <CarouselContent className="-ml-2 md:-ml-4">
+          {team.map((member, index) => (
+            <CarouselItem
+            key={index}
+            className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/4 py-8"
+          >          
               <div
-                className="group flex flex-col items-center"
+                className="group flex flex-col items-center w-[300] sm:w-[250] space-y-4"
                 style={{ height: "350px", width: "250px" }}
               >
                 <div
@@ -55,30 +53,41 @@ export default function TeamMember({ team }: TeamMemberProps) {
                     alt={member.name}
                     width={300}
                     height={400}
-                    className="object-cover transition-transform duration-300 bg-gradient-to-b from-purple-400 to-transparent group-hover:scale-105"
+                    className="object-cover h-full w-full transition-transform duration-300 bg-gradient-to-b from-purple-400 to-transparent group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-balck-100/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black-100/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <div className="mt-4 text-center w-full">
-                  <h4 className="font-bold text-lg">{member.name}</h4>
+                  <h4 className="font-bold text-lg text-purple-600">
+                    {member.name}
+                  </h4>
                   <p className="text-gray-600">{member.position}</p>
                 </div>
               </div>
-            </div>
+            </CarouselItem>
           ))}
-        </div>
-      </div>
-
-      <div className="flex justify-center space-x-4 mt-8">
+        </CarouselContent>
+      </Carousel>
+      <div className="flex justify-center items-center space-x-4 mt-8">
         <Button
-          onClick={handlePrev}
-          className="w-10 h-10 flex items-center justify-center rounded-full bg-purple-100 text-purple-600 hover:bg-purple-200"
+          onClick={() => emblaApi && emblaApi.scrollPrev()}
+          className="w-10 h-10 rounded-full bg-purple-200 text-purple-600 hover:bg-purple-300"
         >
           <ChevronLeft className="w-6 h-6" />
         </Button>
+        <div className="flex justify-center gap-2">
+          {team.map((_, index) => (
+            <div
+              key={index}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                activeIndex === index ? "bg-purple-600 w-6" : "bg-gray-300"
+              }`}
+            />
+          ))}
+        </div>
         <Button
-          onClick={handleNext}
-          className="w-10 h-10 flex items-center justify-center rounded-full bg-purple-100 text-purple-600 hover:bg-purple-200"
+          onClick={() => emblaApi && emblaApi.scrollNext()}
+          className="w-10 h-10 rounded-full bg-purple-200 text-purple-600 hover:bg-purple-300"
         >
           <ChevronRight className="w-6 h-6" />
         </Button>

@@ -79,11 +79,11 @@ export default function AboutPage() {
       {/* Mission Section */}
       <section className="min-h-[75vh] py-10 max-w-6xl mx-auto px-4">
         <h1
-          className="text-7xl font-bold text-center text-transparent"
+          className="sm:text-7xl text-5xl font-bold text-center text-transparent"
           style={{
             WebkitTextStroke: "1px #7c3aed",
             fontFamily: "sans-serif",
-            lineHeight: "0.35",
+            lineHeight: "0.80",
           }}
         >
           OUR MISSION
@@ -92,6 +92,7 @@ export default function AboutPage() {
           className="text-4xl z-10 font-bold text-center"
           style={{
             color: "#7c3aed",
+            lineHeight: "0.80",
           }}
         >
           Our Mission

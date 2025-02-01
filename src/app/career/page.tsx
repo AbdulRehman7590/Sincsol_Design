@@ -52,7 +52,7 @@ export default function CareerPage() {
       <section className="min-h-[75vh] relative container mx-auto mt-12 px-16 py-16">
         <div className="grid md:grid-cols-2 gap-8">
           {/* Image */}
-          <div className="relative ml-[15%] aspect-square md:aspect-auto md:h-[500px] rounded-lg overflow-hidden">
+          <div className="relative sm:ml-[15%] aspect-square md:aspect-auto md:h-[500px] rounded-lg overflow-hidden">
             <Image
               src="/images/team-collaboration.png"
               alt="Team collaboration"
