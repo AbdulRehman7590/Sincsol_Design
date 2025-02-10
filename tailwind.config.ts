@@ -23,7 +23,7 @@ export default {
         "fade-left": "fadeLeft 2s ease-in-out forwards",
         "fade-right": "fadeRight 2s ease-in-out forwards",
         "bounce": "bounce 1.5s infinite",
-        "float": "bounce 2s infinite",
+        "float": "float 4s infinite",
         "spin": "spin 1.5s linear infinite",
         "pulse": "pulse 2s infinite",
         "slide-left": "slideLeft 1.5s ease-in-out forwards",
@@ -63,7 +63,7 @@ export default {
         },
         float: {
           "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-2px)" },
+          "50%": { transform: "translateY(-20px)" }, // Reduced height
         },
         spin: {
           "0%": { transform: "rotate(0deg)" },

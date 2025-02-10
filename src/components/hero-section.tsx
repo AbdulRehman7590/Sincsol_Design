@@ -21,7 +21,7 @@ export default function HeroSection({
       <div className="animate-bounce circle-decoration top-36 left-12" />
       <div className="animate-bounce circle-decoration bottom-12 right-12 hidden sm:block" />
 
-      <div className="container px-4 mx-auto text-center">
+      <div className="animate-zoom-in container px-4 mx-auto text-center">
         <p className="text-sm tracking-wider text-black mb-6">{line}</p>
         {content}
         <div className="pt-8">
