@@ -38,7 +38,7 @@ export function JobCard({ job }: JobCardProps) {
                   <Badge
                     key={tag}
                     variant="secondary"
-                    className="bg-[#E9D7FE] text-[#6941C6] hover:bg-[#E9D7FE]/80"
+                    className="bg-[#E9D7FE] text-[#6941C6] hover:bg-[#E9D7FE]/80 animate-none"
                   >
                     {tag}
                   </Badge>

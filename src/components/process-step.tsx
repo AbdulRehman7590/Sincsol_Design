@@ -1,11 +1,18 @@
+"use client";
+
 import { Steps } from "@/lib/constants";
+import { motion } from "framer-motion";
 
 export default function ProcessStep() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative mx-12">
       {Steps.map((step, index) => (
-        <div
+        <motion.div
           key={index}
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true }}
           className="flex flex-col items-center text-center relative"
         >
           {index < Steps.length - 1 && (
@@ -32,7 +39,7 @@ export default function ProcessStep() {
 
           <h3 className="text-xl font-bold mb-3">{step.title}</h3>
           <p className="text-gray-600 px-6">{step.description}</p>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

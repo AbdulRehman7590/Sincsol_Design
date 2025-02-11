@@ -11,7 +11,7 @@ import {
   Phone,
   Mail,
 } from "lucide-react";
-
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
@@ -67,7 +67,13 @@ export default function ContactPage() {
       <div className="grid md:grid-cols-2 gap-8">
         {/* Left Section */}
         <div className="bg-[#8B5CF6] p-12 pt-44 text-white">
-          <div className="pl-[10%]">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="pl-[10%]"
+          >
             <h1 className="text-5xl font-bold mb-12">
               Let&apos;s Talk With Us
             </h1>
@@ -96,7 +102,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="flex gap-4 mt-12">
+            <div className="flex gap-4 mt-12 animate-float">
               <Link
                 href="#"
                 className="p-2 bg-white/20 rounded-full hover:bg-white/40"
@@ -116,12 +122,18 @@ export default function ContactPage() {
                 <Linkedin className="w-6 h-6" />
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Right Section */}
         <div className="p-8 pt-40">
-          <div className="pr-[17%]">
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="pr-[17%]"
+          >
             <div className="mb-8">
               <h4 className="text-xl text-[#8B5CF6] font-bold mb-3">
                 Contact us
@@ -189,7 +201,7 @@ export default function ContactPage() {
                 Send message
               </Button>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </>

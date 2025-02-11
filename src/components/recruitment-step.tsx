@@ -1,4 +1,5 @@
-import Image from 'next/image';
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface RecruitmentStepProps {
   step: number;
@@ -16,7 +17,13 @@ export default function RecruitmentStep({
   isLast,
 }: RecruitmentStepProps) {
   return (
-    <div className="relative text-center">
+    <motion.div
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+      viewport={{ once: true }}
+      className="relative text-center"
+    >
       <div className="flex flex-col items-center mt-10">
         <div className="w-8 h-8 bg-[#8B5CF6] rounded-full flex items-center justify-center text-white ">
           <p className="text-sm">{step}</p>
@@ -33,6 +40,6 @@ export default function RecruitmentStep({
       {!isLast && (
         <div className="hidden md:block absolute top-[55%] left-[75%] w-[75%] h-[2px] border-t-2 border-dashed border-[#8B5CF6]/60" />
       )}
-    </div>
+    </motion.div>
   );
 }

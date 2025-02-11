@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { projects, categories } from "@/lib/constants";
+import { motion } from "framer-motion";
 
 export default function PortfolioPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -73,7 +74,13 @@ export default function PortfolioPage() {
         </div>
 
         {/* Projects grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <motion.div
+          initial={{ scale: 0.9, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.1 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto"
+        >
           {filteredProjects.map((project) => (
             <Card
               key={project.id}
@@ -116,7 +123,7 @@ export default function PortfolioPage() {
               </div>
             </Card>
           ))}
-        </div>
+        </motion.div>
       </section>
 
       {/* Decorative Circle */}
@@ -164,7 +171,7 @@ export default function PortfolioPage() {
           alt="hero section"
           width={128}
           height={128}
-          className="object-cover"
+          className="object-cover animate-rotate"
           style={{
             clipPath: "inset(0 0 0 30%)",
           }}
@@ -173,7 +180,13 @@ export default function PortfolioPage() {
 
       {/* CTA Section */}
       <section className="sm:pt-12 pb-10">
-        <div className="container px-4 mx-auto text-center">
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.1 }}
+          className="container px-4 mx-auto text-center"
+        >
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
             Let&apos;s Build Your{" "}
             <span className="text-[#8B5CF6]">
@@ -190,7 +203,7 @@ export default function PortfolioPage() {
           >
             <Link href="/contact">Discuss Your Project</Link>
           </Button>
-        </div>
+        </motion.div>
       </section>
 
       <Image

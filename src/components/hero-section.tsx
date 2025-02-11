@@ -43,7 +43,7 @@ export default function HeroSection({
         </div>
       </div>
 
-      <div className="absolute bottom-4 left-0 w-32 h-32 overflow-hidden">
+      <div className="absolute bottom-4 left-0 w-32 h-32 overflow-hidden animate-rotate">
         <Image
           src="/images/hero-circle.png"
           alt="hero section"

@@ -29,7 +29,7 @@ export default function TeamPage() {
       {/* Team Members Section */}
       <section id="team" className="min-h-[80vh] pt-20 pb-6">
         <div className="container px-4 mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 animate-float">
             <Badge
               variant="outline"
               className="text-purple-500 text-md uppercase font-medium border-purple-600 tracking-wider rounded-full px-4 py-2 mb-4"
@@ -53,9 +53,9 @@ export default function TeamPage() {
           alt="hero section"
           width={128}
           height={128}
-          className="object-cover"
+          className="object-contain animate-rotate"
           style={{
-            clipPath: "inset(0 20% 20% 0)",
+            clipPath: "inset(0 25% 20% 0)",
           }}
         />
       </div>

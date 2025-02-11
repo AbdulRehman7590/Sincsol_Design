@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -8,6 +10,7 @@ import ValueCard from "@/components/value-card";
 import Footer from "@/components/footer";
 import { solutions1, solutions2 } from "@/lib/constants";
 import { Badge } from "@/components/ui/badge";
+import { motion } from "framer-motion";
 
 export default function MobileAppDevelopment() {
   return (
@@ -33,7 +36,13 @@ export default function MobileAppDevelopment() {
       {/* Why Choose Section */}
       <section className="min-h-[75vh] grid md:grid-cols-2 gap-12 max-w-7xl mx-auto px-2 pt-28 pb-6">
         {/* Text Column */}
-        <div className="space-y-12">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true }}
+          className="space-y-12"
+        >
           <h2 className="mt-4 text-4xl font-bold leading-relaxed">
             Why Choose SincSol for Your{" "}
             <span className="text-purple-600">Mobile App Development?</span>
@@ -45,10 +54,16 @@ export default function MobileAppDevelopment() {
             business growth, enhance user experiences, and deliver lasting value
             to your brand.
           </p>
-        </div>
+        </motion.div>
 
         {/* Images Column */}
-        <div className="space-y-6 items-center flex flex-col">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="space-y-6 items-center flex flex-col"
+        >
           <Image
             src="/images/mobile-screens.png"
             alt="Meet"
@@ -63,7 +78,7 @@ export default function MobileAppDevelopment() {
             height={200}
             className="lg:transform lg:-translate-x-1/3 lg:-translate-y-1/3 z-10 rounded-lg shadow-lg"
           />
-        </div>
+        </motion.div>
       </section>
 
       {/* Decorative Circle */}
@@ -116,11 +131,17 @@ export default function MobileAppDevelopment() {
 
       {/* Solutions Grid */}
       <section id="values" className="min-h-[75vh] pb-16 px-20 lg:mx-20">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true }}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {solutions1.map((value) => (
             <ValueCard key={value.title} {...value} />
           ))}
-        </div>
+        </motion.div>
         <h1
           className="text-6xl my-10 font-bold text-center text-transparent"
           style={{
@@ -130,11 +151,17 @@ export default function MobileAppDevelopment() {
         >
           MOBILE APP SOLUTIONS
         </h1>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true }}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {solutions2.map((value) => (
             <ValueCard key={value.title} {...value} />
           ))}
-        </div>
+        </motion.div>
       </section>
 
       {/* CTA Section */}
@@ -146,13 +173,19 @@ export default function MobileAppDevelopment() {
             alt="hero section"
             width={172}
             height={172}
-            className="object-cover hidden sm:block"
+            className="object-cover hidden sm:block animate-rotate"
             style={{
               clipPath: "inset(0 0 0 20%)",
             }}
           />
         </div>
-        <div className="container px-4 mx-auto text-center">
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.1 }}
+          className="container px-4 mx-auto text-center"
+        >
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
             Book a{" "}
             <span className="text-[#8B5CF6]">Complimentary Consultation</span>{" "}
@@ -165,7 +198,7 @@ export default function MobileAppDevelopment() {
           >
             <Link href="/contact">Contact Us</Link>
           </Button>
-        </div>
+        </motion.div>
       </section>
 
       <Image

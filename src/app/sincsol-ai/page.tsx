@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
@@ -14,6 +16,7 @@ import {
   aiCaseStudies,
   teamMembers,
 } from "@/lib/constants";
+import { motion } from "framer-motion";
 
 export default function SincSolAIPage() {
   return (
@@ -88,12 +91,17 @@ export default function SincSolAIPage() {
             </span>
           </h2>
         </div>
-
-        <div className="grid mx-16 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.1 }}
+          className="grid mx-16 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {aiServices.map((value) => (
             <ValueCard key={value.title} {...value} />
           ))}
-        </div>
+        </motion.div>
       </section>
 
       {/* Case Studies Section */}
@@ -155,14 +163,14 @@ export default function SincSolAIPage() {
                   <div
                     className={
                       "relative h-[300px] md:h-[400px] rounded-xl overflow-hidden " +
-                      (Number(item.id) % 2 === 0 ? "md:order-`" : "md:order-2")
+                      (Number(item.id) % 2 === 0 ? "md:order-1" : "md:order-2")
                     }
                   >
                     <Image
                       src={item.imageUrl}
                       alt={item.title}
                       fill
-                      className="object-cover"
+                      className="object-cover hover:scale-110 transition-all duration-300 ease-in-out"
                     />
                   </div>
                 </div>
@@ -195,7 +203,13 @@ export default function SincSolAIPage() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url("/images/ai-products.png")` }}
         />
-        <div className="container mx-auto px-4 relative z-10">
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.1 }}
+          className="container mx-auto px-4 relative z-10"
+        >
           <div className="text-center text-white pt-8 md:pt-0 md:translate-y-[150%]">
             <h2 className="text-6xl font-bold mb-2">AI Products</h2>
             <h3 className="text-3xl mb-8">
@@ -206,13 +220,18 @@ export default function SincSolAIPage() {
               solutions
             </p>
           </div>
-
-          <div className="relative h-auto flex flex-col items-center mt-6 md:mt-0 md:pt-0 md:mb-16 md:h-[600px] md:flex-none md:mx-auto">
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.1 }}
+            className="relative h-auto flex flex-col items-center mt-6 md:mt-0 md:pt-0 md:mb-16 md:h-[600px] md:flex-none md:mx-auto"
+          >
             {aiProducts.map((product) => (
               <AIProduct key={product.name} {...product} />
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* Team Section */}
@@ -224,7 +243,7 @@ export default function SincSolAIPage() {
             alt="hero section"
             width={172}
             height={172}
-            className="object-cover"
+            className="object-cover animate-rotate"
             style={{
               clipPath: "inset(0 0 0 20%)",
             }}
