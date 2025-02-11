@@ -38,7 +38,7 @@ export default function TeamMember({ team }: TeamMemberProps) {
           {team.map((member, index) => (
             <CarouselItem
             key={index}
-            className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/4 py-8"
+            className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/4 py-8 flex justify-center"
           >          
               <div
                 className="group flex flex-col items-center w-[300] sm:w-[250] space-y-4"
